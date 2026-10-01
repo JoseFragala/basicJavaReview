@@ -6,10 +6,10 @@ public class Customer{
     private String name;
     private double accountBalance;
 
-    public Customer (int accountNumber, String name, double accountBalance){
+    public Customer (int accountNumber, String name, double initialDeposit){
         this.accountNumber = accountNumber;
         this.name = name;
-        this.accountBalance = accountBalance;
+        deposit(initialDeposit);
 
     }
     public Customer (int accountNumber, String name){

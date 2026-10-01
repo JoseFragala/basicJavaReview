@@ -19,12 +19,12 @@ public class Program {
         char answer = sc.next().charAt(0);
 
         Customer customer; 
-        
+
         if (answer == 'y'){
             System.out.print("Enter initial deposit value: ");
-            double initValue = sc.nextDouble();
+            double initialDeposit = sc.nextDouble();
 
-             customer = new Customer(acNumber, name, initValue);
+             customer = new Customer(acNumber, name, initialDeposit);
         }
         else{
              customer = new Customer(acNumber, name);
@@ -38,14 +38,14 @@ public class Program {
         System.out.print("Enter a deposit value: ");
         double money = sc.nextDouble();
         customer.deposit(money);
-        System.out.println("Account data: ");
+        System.out.println("Updated account data: ");
         System.out.println(customer);
 
         System.out.println();
         System.out.print("Enter a withdraw value: ");
         money = sc.nextDouble();
         customer.withdrawal(money);
-        System.out.println("Account data: ");
+        System.out.println("Updated account data: ");
         System.out.println(customer);
 
 
