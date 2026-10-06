@@ -1,4 +1,4 @@
-package vectors.exercicio12.entities;
+package vectors.exercise12.entities;
 
 public class Student {
 

@@ -1,9 +1,9 @@
-package vectors.exercicio11.application;
+package vectors.exercise11.application;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import vectors.exercicio11.entities.People;
+import vectors.exercise11.entities.People;
 
 public class Program {
     public static void main (String[] args){

@@ -1,4 +1,4 @@
-package vectors.exercicio11.entities;
+package vectors.exercise11.entities;
 
 public class People {
 
