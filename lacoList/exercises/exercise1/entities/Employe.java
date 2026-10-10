@@ -4,10 +4,14 @@ import java.util.List;
 
 public class Employe {
     
-    Integer id;
-    String name;
-    Double salary;
+    private Integer id;
+    private String name;
+    private Double salary;
 
+
+    public Employe(){
+
+    }
     public Employe(Integer id, String name, Double salary) {
         this.id = id;
         this.name = name;
@@ -28,19 +32,9 @@ public class Employe {
         return salary;
     }
 
-    public static Employe getById(List<Employe> list, int id){
-        for(Employe emplo : list){
-            if (emplo.getId() == id){
-                return emplo;
-            }
-        }
-
-        return null;
-    }
-
         @Override
     public String toString() {
-        return id + ", " + name + ", " + salary;
+        return id + ", " + name + ", " + String.format("R$ %.2f", salary);
     }
 
         public void increaseSalary(double percentage){
