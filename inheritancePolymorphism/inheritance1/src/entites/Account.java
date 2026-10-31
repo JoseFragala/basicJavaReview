@@ -1,6 +1,6 @@
 package entites;
 
- public class Account {
+ public abstract class Account {
 
     private Integer number;
     private String holder;
