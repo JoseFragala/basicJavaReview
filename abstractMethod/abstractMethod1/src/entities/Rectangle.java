@@ -1,6 +1,6 @@
 package entities;
 
-public class Rectangle extends Shape {
+public class Rectangle extends AbstractShape implements Shape {
 
     private Double width;
     private Double height;
