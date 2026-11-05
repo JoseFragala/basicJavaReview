@@ -2,59 +2,31 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
 
 import entities.Circle;
-import entities.Color;
 import entities.Rectangle;
 import entities.Shape;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        Locale.setDefault(Locale.US);
+        List<Shape> myShapes = new ArrayList<>();
+        myShapes.add(new Rectangle( 3.0, 2.0));
+        myShapes.add(new Circle( 2.0));
 
-        Scanner sc = new Scanner(System.in);
+        List<Circle> circle = new ArrayList<>();
+        circle.add(new Circle(2.0));
+        circle.add(new Circle(4.0));
 
-        System.out.print("Enter the number of shapes: ");
-        int n = sc.nextInt();
+        System.out.println("Total area shape list: " + totalArea(myShapes));
+        System.out.println("Total area circle list: "+ totalArea(circle));
 
-        List<Shape> list = new ArrayList<>();
-
-        for (int i = 0; i<n; i++){
-            System.out.println("Shape #" + (i + 1) + " data:");
-            System.out.print("Rectangle or Circle (r/c)? ");
-            char resp = sc.next().charAt(0);
-            System.out.print("Coloar (BLACK/BLUE/RED): ");
-            Color color = Color.valueOf(sc.next());
-            if (resp == 'r'){
-                System.out.print("Width: ");
-                double w = sc.nextDouble();
-                System.out.print("Height: ");
-                double h = sc.nextDouble();
-
-            Shape shape = new Rectangle(color, w, h);
-
-            list.add(shape);
-
-            }else{
-                System.out.print("Radius: ");
-                double radius = sc.nextDouble();
-
-            Shape shape = new Circle(color, radius);
-
-            list.add(shape);
+    }
+    public static double totalArea(List<? extends Shape> list){
+            double sum = 0.0;
+            for (Shape s : list){
+                sum += s.area();
             }
+            return sum;
         }
-
-        System.out.println();
-        System.out.println("SHAPE AREAS: ");
-        for(Shape s : list){
-            System.out.println(String.format("%.2f", s.area()));
-            }
-
-        sc.close();
-        
-}
 }

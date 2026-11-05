@@ -1,6 +1,6 @@
 package entities;
 
-public class Circle extends AbstractShape implements Shape {
+public class Circle implements Shape {
     
     private Double radius;
 
@@ -10,8 +10,7 @@ public class Circle extends AbstractShape implements Shape {
     }
 
 
-    public Circle(Color color, Double radius) {
-        super(color);
+    public Circle(Double radius) {
         this.radius = radius;
     }
 

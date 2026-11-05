@@ -1,6 +1,6 @@
 package entities;
 
-public class Rectangle extends AbstractShape implements Shape {
+public class Rectangle implements Shape {
 
     private Double width;
     private Double height;
@@ -9,8 +9,7 @@ public class Rectangle extends AbstractShape implements Shape {
         super();
     }
 
-    public Rectangle(Color color, Double width, Double height) {
-        super(color);
+    public Rectangle( Double width, Double height) {
         this.width = width;
         this.height = height;
     }
